@@ -4,7 +4,7 @@ A minimalistic note-taking app that supports live **Markdown preview**, built en
 
 ---
 
-## 📦 Features
+### 📦 Features
 
 * 🧠 Write and preview notes using **Markdown** in real-time
 * 💾 Save, update, delete, and view notes
@@ -26,9 +26,10 @@ Markdown Preview/
 └── server.js       # Main Node.js server file
 ```
 ---
-
-
-## ✍️ Usage
+### Screenshots
+![Note](./Screenshots/markdown.png)
+---
+### ✍️ Usage
 
 * Type Markdown in the left `textarea`.
 * See the **live preview** on the right.

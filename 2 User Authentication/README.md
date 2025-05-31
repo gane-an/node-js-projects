@@ -5,7 +5,7 @@ Includes user signup and login with password hashing and JSON file storage.
 
 ---
 
-## 🗂️ Project Structure
+### 🗂️ Project Structure
 ```bash 
 User Authentication/
 ├── public/
@@ -17,8 +17,10 @@ User Authentication/
 └── server.js       # Main Node.js server file
 ```
 ---
-
-## 🚀 Features
+### Screenshots
+![Signup](./Screenshots/signup.png)
+---
+### 🚀 Features
 
 * User signup with username and password
 * User login with password verification
