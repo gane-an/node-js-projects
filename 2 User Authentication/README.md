@@ -13,7 +13,7 @@ User Authentication/
 │   ├── login.html
 │   ├── style.css
 │   └── script.js
-├── users.json      # JSON file used to store tasks
+├── users.json      # JSON file used to store users
 └── server.js       # Main Node.js server file
 ```
 ---
