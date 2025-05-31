@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes Preview</title>
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Script for markdown -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="grid-container">
+        <div class="input-area">
+          <h2>Markdown Notes</h2>
+          <textarea
+            id="noteInput"
+            placeholder="Write your note here.."
+          ></textarea>
+          <div class="grid-box">
+            <input type="text" id="noteNameInput" placeholder="Note name" />
+            <button onclick="addOrUpdateNote()">Save/Update</button>
+          </div>
+        </div>
+        <div class="preview-area">
+          <h2>Preview</h2>
+          <div id="preview"></div>
+        </div>
+      </div>
+      <div class="saved-notes">
+        <h2>Saved Notes</h2>
+        <ul id="noteList"></ul>
+      </div>
+      <div class="modal" id="showModal">
+        <div class="modal-content">
+          <h2 id="modalNoteName"></h2>
+          <div id="modalNoteContent"></div>
+          <div class="btn">
+            <button onclick="downloadNote()">Download</button>
+            <button onclick="closeModal('showModal')">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

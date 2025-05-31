@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  background: #bbb;
+  min-height: 100vh;
+  display: grid;
+  /* place-content: ; */
+}
+body {
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+h2 {
+  font-weight: 600;
+  color: rebeccapurple;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.input-area {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+#preview {
+  /* white-space: pre-wrap; */
+  line-height: 1;
+  background: #fff;
+  min-height: 300px !important;
+  padding: 10px;
+  height: 300px;
+  overflow-y: auto;
+  border-radius: 4px;
+}
+#noteInput,
+.preview-area {
+  min-height: 300px;
+  /* max-width: 550px; */
+  resize: none;
+  padding: 10px;
+  outline: none;
+  border-radius: 4px;
+}
+.grid-box {
+  display: flex;
+  /* margin:10px 10px 0 ; */
+  margin-top: 10px;
+  gap: 5px;
+  justify-content: space-between;
+}
+#noteNameInput {
+  width: 100%;
+  margin-right: 10px;
+  outline: none;
+  /* border-radius: ; */
+  padding: 0 10px;
+}
+.input-area button {
+  width: 150px;
+  padding: 5px;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid #000;
+  cursor: pointer;
+  background: teal;
+  color: #fff;
+}
+.input-area button:hover {
+  background: rgb(3, 175, 175);
+  /* color: #000; */
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.saved-notes {
+  padding: 10px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  /* background: red; */
+  width: 400px;
+  max-width: 500px;
+}
+.saved-notes h2 {
+  position: sticky;
+  top: 0;
+  background: #bbb;
+  padding: 10px 0;
+  z-index: 2;
+}
+#noteList {
+  list-style: none;
+}
+#noteList li {
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+  background: #eee;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+#noteList li > :first-child {
+  margin-left: auto;
+}
+#noteList li button {
+  padding: 0 10px;
+  cursor: pointer;
+  border-radius: 3px;
+  outline: none;
+  /* border: 1px solid #000; */
+}
+#noteList li button:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+#noteList li button:nth-child(1) {
+  background: #00af00;
+  border: none;
+  color: #fff;
+}
+#noteList li button:nth-child(1):hover {
+  background: green;
+}
+#noteList li button:nth-child(2) {
+  background: #ffdd00;
+  border: none;
+  color: #000;
+}
+#noteList li button:nth-child(2):hover {
+  background: yellow;
+}
+#noteList li button:nth-child(3) {
+  background: #ff2020;
+  border: none;
+  color: #fff;
+}
+#noteList li button:nth-child(3):hover {
+  background: red;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  display: none;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 600px;
+  max-height: 90vh;
+  /* line-height: 1; */
+  overflow-y: auto;
+  width: 100%;
+}
+.modal-content #modalNoteName {
+  background: #bcbcbc;
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+.modal-content .btn {
+  display: flex;
+  justify-content: end;
+  gap: 5px;
+  margin-top: 10px;
+}
+#modalNoteContent {
+  padding-left: 20px;
+}
+#modalNoteContent p {
+  line-height: 1;
+}
+.btn button {
+  padding: 5px 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+.btn button:nth-child(1) {
+  width: 150px;
+  background: lightseagreen;
+}
+.btn button:nth-child(2) {
+  width: 100px;
+  background: red;
+  color: #fff;
+}
+.btn button:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Small screen  */
+@media (max-width: 660px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .modal-content {
+    max-width: 85vw;
+    padding: 10px;
+    font-size: 14px;
+  }
+}
