@@ -26,4 +26,7 @@ The goal of this repo is to practice and demonstrate how to build real-world bac
 
 ---
 
-**Thank you for expoloring my projects**
+## 🙌 Thank You
+
+Thank you for exploring my projects!
+Feel free to fork this repo and practice — it’s made for learning. 🚀
