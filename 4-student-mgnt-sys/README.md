@@ -47,10 +47,13 @@ student-management/
 
 ### 1️⃣ Clone the repo
 
-```bash
-git clone https://github.com/your-username/student-management.git
-cd student-management
-```
+## 📥 Download & Run
+
+1. Go to: [4-student-mgnt-sys](https://github.com/gane-an/node-js-projects/tree/main/4-student-mgnt-sys)
+2. Click the green **Code** button → **Download ZIP**.
+3. Extract the ZIP file.
+4. Open the folder `4-student-mgnt-sys` in your editor (e.g., VS Code).
+5. Follow the setup instructions in this README to run the project.
 
 ### 2️⃣ Setup Database
 
