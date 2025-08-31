@@ -134,4 +134,4 @@ Simply open `frontend/index.html` in your browser.
 
 ## 👨‍💻 Author
 
-Developed by **[Ganesan](/)** 🚀
+Developed by **Ganesan** 🚀
