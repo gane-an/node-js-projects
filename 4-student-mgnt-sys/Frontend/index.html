@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Student Management</title>
+    <style>
+      /* General Page Styles */
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: #f0f4f8;
+        color: #333;
+        margin: 0;
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #2c3e50;
+      }
+
+      /* Button Styles */
+      button {
+        background: #3498db;
+        color: #fff;
+        border: none;
+        padding: 10px 16px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background 0.3s ease;
+      }
+
+      button:hover {
+        background: #2980b9;
+      }
+
+      /* Table Container */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background: #fff;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      th,
+      td {
+        padding: 12px 15px;
+        text-align: center;
+      }
+
+      th {
+        background: #2c3e50;
+        color: #fff;
+        font-weight: 600;
+      }
+
+      tr:nth-child(even) {
+        background: #f9f9f9;
+      }
+
+      tr:hover {
+        background: #ecf6ff;
+        transition: 0.3s;
+      }
+
+      /* Action Buttons */
+      .edit-btn {
+        background: #27ae60;
+      }
+
+      .edit-btn:hover {
+        background: #1e8449;
+      }
+
+      .delete-btn {
+        background: #e74c3c;
+      }
+
+      .delete-btn:hover {
+        background: #c0392b;
+      }
+
+      /* Top Section */
+      .top-bar {
+        display: flex;
+        justify-content: space-between;
+        justify-content: right;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🎓 Student Management System</h1>
+    <div class="top-bar">
+      <button onclick="location.href='add.html'">➕ Add Student</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>City</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody id="studentTable">
+        <!-- Example Row -->
+        <tr>
+          <td>1</td>
+          <td>John Doe</td>
+          <td>20</td>
+          <td>New York</td>
+          <td><button class="edit-btn">Edit</button></td>
+          <td><button class="delete-btn">Delete</button></td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>John Doe</td>
+          <td>20</td>
+          <td>New York</td>
+          <td><button class="edit-btn">Edit</button></td>
+          <td><button class="delete-btn">Delete</button></td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>John Doe</td>
+          <td>20</td>
+          <td>New York</td>
+          <td><button class="edit-btn">Edit</button></td>
+          <td><button class="delete-btn">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
