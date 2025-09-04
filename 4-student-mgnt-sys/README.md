@@ -47,8 +47,6 @@ student-management/
 
 ### 1️⃣ Clone the repo
 
-## 📥 Download & Run
-
 1. Go to: [4-student-mgnt-sys](https://github.com/gane-an/node-js-projects/tree/main/4-student-mgnt-sys)
 2. Click the green **Code** button → **Download ZIP**.
 3. Extract the ZIP file.

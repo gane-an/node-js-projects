@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Employee Management</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>👨‍💼 Employee Management</h1>
+
+      <!-- Employee Form -->
+      <div class="form-card">
+        <h2 id="formTitle">➕ Add Employee</h2>
+        <form id="employeeForm" class="form-grid">
+          <input type="hidden" id="employeeId" />
+          <input type="text" id="name" placeholder="Employee Name" required />
+          <input
+            type="text"
+            id="employee_code"
+            placeholder="Employee Code"
+            required
+          />
+          <input type="number" id="salary" placeholder="Salary" required />
+
+          <div class="form-actions">
+            <button type="submit" class="btn primary">💾 Save</button>
+            <button type="button" id="cancelEdit" class="btn danger hidden">
+              ❌ Cancel
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Employee Table -->
+      <div class="table-card">
+        <h2>📋 Employee List</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>👤 Name</th>
+              <th>🆔 Code</th>
+              <th>💰 Salary</th>
+              <th>⚙️ Actions</th>
+            </tr>
+          </thead>
+          <tbody id="employeeTable"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
