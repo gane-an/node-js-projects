@@ -1,72 +1,117 @@
-# 📝 Markdown Notes Preview App (Pure Node.js)
+# 📝 Markdown Notes Preview App (Node.js + MySQL)
 
-A minimalistic note-taking app that supports live **Markdown preview**, built entirely with **core Node.js**, no frameworks.
-
----
-
-### 📦 Features
-
-* 🧠 Write and preview notes using **Markdown** in real-time
-* 💾 Save, update, delete, and view notes
-* 💻 Backend powered by core Node.js `http`, `fs`, and `path` modules
-* 📄 All notes stored in a local `notes.json` file
-* 📥 Download saved notes as `.md` files
-* ⚡ No frameworks or databases required
+A lightweight **Markdown note-taking app** with real-time preview, built using **core Node.js** and **MySQL** for persistent storage.
 
 ---
 
-## 🗂️ Project Structure
-```bash 
-Markdown Preview/
+## 🚀 Features
+
+- ✍️ **Write & preview** Markdown notes in real time
+- 💾 **Save, update, delete, and view** notes with MySQL database
+- 📂 Notes stored in **MySQL table** (`notes`) instead of JSON file
+- 📥 **Download notes** as `.md` files
+- ⚡ **Pure Node.js backend** (`http`, `fs`, `path`) – no frameworks like Express
+
+---
+
+## 📂 Project Structure
+
+```bash
+Markdown-Preview/
 ├── public/
-│   ├── index.html
-│   ├── style.css
-│   └── script.js
-├── notes.json      # JSON file used to store notes
-└── server.js       # Main Node.js server file
+│   ├── index.html      # UI (Markdown editor & preview)
+│   ├── style.css       # Styling
+│   └── script.js       # Frontend logic
+├── config/
+│   └── db.js           # MySQL connection configuration
+└── server.js           # Core Node.js backend
 ```
----
-### Screenshots
-![Note](./Screenshots/markdown.png)
----
-### ✍️ Usage
-
-* Type Markdown in the left `textarea`.
-* See the **live preview** on the right.
-* Give your note a **name** and click **Save/Update**.
-* View saved notes in the **Saved Notes** section.
-* Click:
-
-  * **Show** to open a modal view with preview and download
-  * **Edit** to update
-  * **Delete** to remove a note
 
 ---
 
-## 📋 API Endpoints
+## 🖼️ Screenshots
 
-| Method | Endpoint     | Description          | Request Body Example                             |
-| ------ | ------------ | -------------------- | ------------------------------------------------ |
-| GET    | `/api/notes` | Fetch all notes      | –                                                |
-| POST   | `/api/notes` | Add a new note       | `{ "name": "Note1", "content": "## Markdown" }`  |
-| PUT    | `/api/notes` | Update existing note | `{ "id": 123, "name": "New", "content": "..." }` |
-| DELETE | `/api/notes` | Delete a note        | `{ "id": 123 }`                                  |
+![Markdown Notes Preview](./Screenshots/markdown.png)
 
 ---
 
-## 🛠️ Technologies Used
+## 🗄️ Database Setup
 
-* HTML, CSS, JavaScript
-* [Marked.js](https://marked.js.org/) for Markdown parsing
-* Node.js core modules (`http`, `fs`, `path`)
+Run the following SQL commands in MySQL before starting:
+
+```sql
+CREATE DATABASE notes_app;
+
+USE notes_app;
+
+CREATE TABLE notes (
+  id BIGINT PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(255) NOT NULL,
+  content TEXT NOT NULL
+);
+```
+
+Update your MySQL credentials in **`config/db.js`**:
+
+```js
+import mysql from "mysql2/promise";
+
+const db = await mysql.createConnection({
+  host: "localhost",
+  user: "root", // your MySQL username
+  password: "root", // your MySQL password
+  database: "notes_app",
+});
+
+export default db;
+```
 
 ---
+
+## 📌 Usage Guide
+
+1. Start the server:
+
+   ```bash
+   node server.js
+   ```
+
+   Server runs at: [http://localhost:9090](http://localhost:9090)
+
+2. Open the app in your browser.
+
+3. Type Markdown in the **editor (left panel)**.
+
+4. Instantly see the **live preview (right panel)**.
+
+5. Use buttons to **Save / Update / Show / Edit / Delete** notes.
+
+---
+
+## 🌐 API Endpoints
+
+| Method     | Endpoint     | Description             | Example Request Body                                 |
+| ---------- | ------------ | ----------------------- | ---------------------------------------------------- |
+| **GET**    | `/api/notes` | Fetch all notes         | –                                                    |
+| **POST**   | `/api/notes` | Add a new note          | `{ "name": "Note1", "content": "## Markdown" }`      |
+| **PUT**    | `/api/notes` | Update an existing note | `{ "id": 123, "name": "Updated", "content": "..." }` |
+| **DELETE** | `/api/notes` | Delete a note           | `{ "id": 123 }`                                      |
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend** → HTML, CSS, JavaScript, [Marked.js](https://marked.js.org/)
+- **Backend** → Core Node.js (`http`, `fs`, `path`)
+- **Database** → MySQL (`mysql2`)
+
+---
+
 ## 👨‍💻 Author
 
 **Ganesan**
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat\&logo=linkedin)](https://www.linkedin.com/in/gane-an)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/gane-an)
 
 ---
 
-### <center>🙏 Thank You for Visiting! 😊</center> 
-
+<p align="center">🙏 Thanks for visiting! If you like this project, fork the repo and work on it 🚀</p>
